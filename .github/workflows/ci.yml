@@ -13,10 +13,7 @@ jobs:
 
     steps:
     - name: Code Checkout
-    - uses: actions/checkout@v4
-
-    - name: Docker Compose Up
-      run: docker-compose up -d
+      uses: actions/checkout@v4
     
     - name: Set up JDK 21
       uses: actions/setup-java@v4
@@ -27,7 +24,3 @@ jobs:
         
     - name: Validates Test Coverage
       run: mvn clean verify
-
-    - name: Docker Compose Down
-      run: docker-compose down
-
