@@ -15,8 +15,8 @@ jobs:
     - name: Code Checkout
       uses: actions/checkout@v4
 
-    - name: Set up Docker-Compose
-      uses: docker/setup-compose-action@v1.2.0
+    - name: Set up Docker Compose
+      uses: docker/setup-buildx-action@v2
 
     - name: Docker Compose Up
       run: docker-compose up -d
