@@ -1,0 +1,10 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: db_roadmap
+    environment:
+      POSTGRES_DB: roadmap_local
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
